@@ -1,0 +1,6 @@
+.gloating-nav {
+  background-color: black;
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+  border: 1px solid; /* Adjust border style as needed */
+  opacity: 1; /* Equivalent to opacity-100 */
+}
