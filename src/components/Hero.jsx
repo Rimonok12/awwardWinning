@@ -9,10 +9,11 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
+
   const [isLoading, setIsLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
 
-  const totalVideos = 3; // Set to the total number of videos you have
+  const totalVideos = 4; // Set to the total number of videos you have
   const nextVideoRef = useRef(null);
 
   const upComingVideoIndex = (currentIndex % totalVideos) + 1;
@@ -30,7 +31,7 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    if (loadedVideos >= totalVideos) {
+    if (loadedVideos >= totalVideos - 1) {
       console.log('All videos loaded, setting isLoading to false');
       setIsLoading(false);
     }
@@ -102,6 +103,7 @@ const Hero = () => {
             <video
               ref={nextVideoRef}
               src={getVideoSrc(upComingVideoIndex)}
+              // autoplay
               loop
               muted
               id="current-video"
@@ -127,7 +129,7 @@ const Hero = () => {
           }
         />
         <video
-          src={getVideoSrc(currentIndex === totalVideos ? 1 : currentIndex)}
+          src={getVideoSrc(currentIndex === totalVideos - 1 ? 1 : currentIndex)}
           loop
           muted
           className="absolute left-0 top-0 size-full object-fill object-center"
