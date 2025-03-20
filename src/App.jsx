@@ -24,17 +24,4 @@ const App = () => {
 
 export default App;
 
-// const socialLinks = [
-//   {
-//     href: 'https://github.com/Rimonok12',
-//     icon: <FaGithub />,
-//   },
-//   {
-//     href: 'https://www.linkedin.com/in/rdn12',
-//     icon: <FaLinkedin />,
-//   },
-//   {
-//     href: 'https://www.instagram.com/rimon_d_n/',
-//     icon: <FaSquareInstagram />,
-//   },
-// ];
+
